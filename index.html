@@ -15,107 +15,110 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
             color: #333;
+            font-size: 14px; /* 基础字体大小 */
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
         
         header {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            padding: 25px;
+            padding: 15px;
             text-align: center;
             color: white;
         }
         
         h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         
         .subtitle {
-            font-size: 1.2em;
+            font-size: 1em;
             opacity: 0.9;
         }
         
         .content {
-            padding: 30px;
+            padding: 15px;
         }
         
         .input-section {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
         }
         
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #2c3e50;
-            margin-bottom: 20px;
-            border-left: 4px solid #4facfe;
-            padding-left: 10px;
+            margin-bottom: 15px;
+            border-left: 3px solid #4facfe;
+            padding-left: 8px;
         }
         
         .input-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
+            grid-template-columns: 1fr; /* 手机端单列布局 */
+            gap: 12px;
+            margin-bottom: 15px;
         }
         
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 600;
             color: #2c3e50;
+            font-size: 0.9em;
         }
         
         input {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 2px solid #e9ecef;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 6px;
+            font-size: 14px;
             transition: border-color 0.3s;
         }
         
         input:focus {
             border-color: #4facfe;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+            box-shadow: 0 0 0 2px rgba(79, 172, 254, 0.2);
         }
         
         .calculate-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 12px 20px;
+            font-size: 16px;
             font-weight: bold;
-            border-radius: 50px;
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+            margin-top: 8px;
+            width: 100%;
         }
         
         .calculate-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.6);
         }
         
         .calculate-btn:active {
@@ -124,149 +127,157 @@
         
         .results-section {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         
         .result-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 更适合手机的小单元格 */
+            gap: 10px;
         }
         
         .result-item {
             background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 6px;
             text-align: center;
             transition: transform 0.3s;
+            font-size: 0.85em;
         }
         
         .result-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .result-value {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: bold;
             color: #667eea;
-            margin-top: 5px;
+            margin-top: 3px;
         }
         
         /* 特殊样式用于点间距显示 */
         .pitch-spacing-container {
             display: flex;
             gap: 5px;
+            flex-direction: column; /* 手机端垂直排列 */
         }
         
         .pitch-half {
             flex: 1;
             text-align: center;
-            border-right: 1px solid #ddd;
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
         }
         
         .pitch-half:last-child {
-            border-right: none;
+            border-bottom: none;
         }
         
         /* 设备推荐区域样式 - 完整参数版 */
         .recommendation-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-top: 30px;
+            padding: 20px 15px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
         
         .recommendation-title {
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.4em;
+            margin-bottom: 15px;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         
         .level-info {
             background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
             backdrop-filter: blur(10px);
+            font-size: 0.9em;
         }
         
         .level-name {
-            font-size: 1.6em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #ffd700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .level-description {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 10px;
         }
         
         .level-criteria {
-            font-size: 0.95em;
+            font-size: 0.85em;
             background: rgba(0, 0, 0, 0.2);
-            padding: 8px 15px;
-            border-radius: 8px;
-            margin-top: 10px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            margin-top: 8px;
         }
         
         .device-category {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin-bottom: 25px;
-            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .category-title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #ffd700;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 8px;
         }
         
         .device-table-container {
             overflow-x: auto;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
         
         .device-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 1600px;
+            min-width: 100%; /* 适应容器宽度 */
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
         }
         
         .device-table th {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
-            padding: 12px 15px;
+            padding: 10px 8px;
             text-align: left;
             font-weight: bold;
             position: sticky;
             top: 0;
             z-index: 10;
+            font-size: 0.8em;
         }
         
         .device-table td {
-            padding: 10px 15px;
+            padding: 8px;
             border-bottom: 1px solid #e9ecef;
             color: #ff3859;
-            font-size: 0.95em;
+            font-size: 0.8em;
             vertical-align: top;
+            word-break: break-word; /* 关键：允许文字换行 */
+            overflow-wrap: break-word; /* 确保长单词也能换行 */
         }
         
         .device-table tr:hover {
@@ -280,66 +291,74 @@
         .device-name {
             font-weight: bold;
             color: #ff4262;
-            font-size: 1.1em;
+            font-size: 0.9em;
         }
         
         .param-label {
             font-weight: 600;
             color: #2c3e50;
-            min-width: 180px;
+            min-width: 120px;
             display: inline-block;
+            font-size: 0.85em;
         }
         
         .param-value {
             color: #495057;
             font-weight: 500;
+            font-size: 0.85em;
+            word-break: break-word; /* 参数值也要能换行 */
+            overflow-wrap: break-word;
         }
         
         .device-params {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 12px;
-            padding: 15px;
+            grid-template-columns: 1fr; /* 手机端单列显示参数 */
+            gap: 8px;
+            padding: 10px;
             background: #f8f9fa;
-            border-radius: 8px;
-            margin: 8px 0;
+            border-radius: 6px;
+            margin: 6px 0;
         }
         
         .param-item {
             display: flex;
-            gap: 10px;
+            flex-direction: column; /* 手机端垂直排列标签和值 */
+            gap: 3px;
         }
         
         .loading {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             color: #ffd700;
-            font-size: 1.2em;
+            font-size: 1em;
         }
         
         .error {
             background: #dc3545;
             color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 8px 0;
             text-align: center;
+            font-size: 0.9em;
         }
         
         .export-btns {
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            flex-direction: column; /* 手机端垂直排列按钮 */
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
         }
         
         .export-btn {
-            padding: 10px 20px;
+            padding: 8px 16px;
             border: none;
-            border-radius: 25px;
+            border-radius: 20px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
+            width: 80%; /* 按钮占满容器 */
         }
         
         .export-excel {
@@ -354,24 +373,74 @@
         
         .export-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         
-        @media (max-width: 768px) {
-            .input-grid, .result-grid {
-                grid-template-columns: 1fr;
+        /* 响应式设计：平板及以上设备 */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+                font-size: 16px;
             }
             
-            .content {
-                padding: 20px;
+            .input-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .result-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
             
             h1 {
                 font-size: 1.8em;
             }
             
-            .device-table {
-                min-width: 1200px;
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .input-section {
+                padding: 20px;
+            }
+            
+            .export-btns {
+                flex-direction: row; /* 平板及以上水平排列 */
+                justify-content: center;
+            }
+            
+            .export-btn {
+                width: auto; /* 平板及以上按钮自动宽度 */
+            }
+        }
+        
+        /* 桌面端进一步优化 */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1200px;
+            }
+            
+            .input-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .result-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .device-params {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
     </style>
@@ -495,7 +564,7 @@
             </div>
             
             <div class="recommendation-section" id="recommendationSection" style="display: none;">
-                <h2 class="recommendation-title">设备推荐</h2>
+                <h2 class="recommendation-title">智能设备推荐 - 完整参数版</h2>
                 <div class="level-info">
                     <div class="level-name" id="levelName">1-2网口小屏</div>
                     <div class="level-description" id="levelDescription">适用于小型屏幕，1-2个网口输出</div>
@@ -938,7 +1007,7 @@
             "效果调节": "支持标准，鲜艳，会议，人像4种模式切换",
             "一键护眼": "支持",
             "Launcher自定义": "支持",
-            "开机动画自定义": "支持"
+            "开动机画自定义": "支持"
           },
           {
             "产品名称": "TU20",
@@ -960,7 +1029,7 @@
             "效果调节": "支持标准，鲜艳，会议，人像4种模式切换",
             "一键护眼": "支持",
             "Launcher自定义": "支持",
-            "开机动画自定义": "支持"
+            "开动机画自定义": "支持"
           },
           {
             "产品名称": "TU20 Pro",
@@ -982,7 +1051,7 @@
             "效果调节": "支持标准，鲜艳，会议，人像4种模式切换",
             "一键护眼": "支持",
             "Launcher自定义": "支持",
-            "开机动画自定义": "支持"
+            "开动机画自定义": "支持"
           }
         ],
         "二合一控制器": [
@@ -1404,7 +1473,7 @@
             "效果调节": "支持标准，鲜艳，会议，人像4种模式切换",
             "一键护眼": "支持",
             "Launcher自定义": "支持",
-            "开机动画自定义": "支持"
+            "开动机画自定义": "支持"
           }
         ]
       }
@@ -1708,6 +1777,14 @@
             const cabinetWidth = parseFloat(document.getElementById('cabinetWidth').value) || 0;
             const cabinetHeight = parseFloat(document.getElementById('cabinetHeight').value) || 0;
             
+            // 验证输入值
+            if (panelWidth <= 0 || panelHeight <= 0 || panelWidthPoints <= 0 || panelHeightPoints <= 0 || 
+                screenWidth <= 0 || screenHeight <= 0 || scan <= 0 || 
+                cabinetWidth <= 0 || cabinetHeight <= 0) {
+                alert('请确保所有输入值都大于0');
+                return;
+            }
+            
             // 2. 核心计算逻辑 - 完全按照要求实现
             
             // 宽/高灯板数量 (向上取整)
@@ -1771,7 +1848,7 @@
             
             // 更新点间距显示
             const pitchSpacingElement = document.getElementById('pitchSpacing');
-            if (Math.abs(pitchWidth - pitchHeight) < 0.0001) { // 相等的情况
+            if (Math.abs(pitchWidth - pitchHeight) < 0.000001) { // 相等的情况
                 pitchSpacingElement.textContent = pitchWidth.toFixed(2);
             } else { // 不相等的情况
                 pitchSpacingElement.innerHTML = `
@@ -1927,10 +2004,91 @@
             devicesContainer.innerHTML = html;
         }
 
-        // 导出到Excel（模拟）
+        // 导出到Excel功能
         function exportToExcel() {
-            alert('设备推荐数据导出功能已触发！\n实际使用时需要集成SheetJS库实现真正的Excel导出功能。');
-            // 实际项目中需要引入SheetJS库来实现真正的Excel导出
+            // 创建工作簿对象
+            const wb = XLSX.utils.book_new();
+            
+            // 1. 创建输入参数工作表
+            const inputSheetData = [
+                ['参数', '值'],
+                ['灯板宽度 (mm)', document.getElementById('panelWidth').value || '-'],
+                ['灯板高度 (mm)', document.getElementById('panelHeight').value || '-'],
+                ['灯板宽度点数', document.getElementById('panelWidthPoints').value || '-'],
+                ['灯板高度点数', document.getElementById('panelHeightPoints').value || '-'],
+                ['屏幕宽尺寸 (mm)', document.getElementById('screenWidth').value || '-'],
+                ['屏幕高尺寸 (mm)', document.getElementById('screenHeight').value || '-'],
+                ['扫数', document.getElementById('scan').value || '-'],
+                ['箱体宽度 (mm)', document.getElementById('cabinetWidth').value || '-'],
+                ['箱体高度 (mm)', document.getElementById('cabinetHeight').value || '-']
+            ];
+            const inputWS = XLSX.utils.aoa_to_sheet(inputSheetData);
+            XLSX.utils.book_append_sheet(wb, inputWS, '输入参数');
+            
+            // 2. 创建输出结果工作表
+            const outputSheetData = [
+                ['计算项目', '结果'],
+                ['宽灯板数量', document.getElementById('widthPanelCount').textContent],
+                ['高灯板数量', document.getElementById('heightPanelCount').textContent],
+                ['灯板总数', document.getElementById('totalPanelCount').textContent],
+                ['屏幕宽点数 (px)', document.getElementById('screenWidthPoints').textContent],
+                ['屏幕高点数 (px)', document.getElementById('screenHeightPoints').textContent],
+                ['屏幕总点数', document.getElementById('totalPoints').textContent],
+                ['单屏网线数量', document.getElementById('networkCables').textContent],
+                ['平米模组个数', document.getElementById('modulesPerSquare').textContent],
+                ['单张模组IC数量', document.getElementById('icPerModule').textContent],
+                ['平米IC个数', document.getElementById('icPerSquare').textContent],
+                ['整屏驱动IC总个数', document.getElementById('totalICCount').textContent],
+                ['宽箱体数量', document.getElementById('widthBoxCount').textContent],
+                ['高箱体数量', document.getElementById('heightBoxCount').textContent],
+                ['箱体总数', document.getElementById('totalBoxCount').textContent],
+                ['点间距 (mm)', document.getElementById('pitchSpacing').textContent]
+            ];
+            const outputWS = XLSX.utils.aoa_to_sheet(outputSheetData);
+            XLSX.utils.book_append_sheet(wb, outputWS, '输出结果');
+            
+            // 3. 创建设备推荐工作表
+            const levelName = document.getElementById('levelName').textContent;
+            const levelDescription = document.getElementById('levelDescription').textContent;
+            const levelCriteria = document.getElementById('levelCriteria').textContent;
+            
+            // 获取设备推荐区域的数据
+            const devicesContainer = document.getElementById('devicesContainer');
+            const deviceSheetsData = [];
+            
+            deviceSheetsData.push(['设备推荐信息']);
+            deviceSheetsData.push(['档位名称', levelName]);
+            deviceSheetsData.push(['描述', levelDescription]);
+            deviceSheetsData.push(['判断条件', levelCriteria]);
+            deviceSheetsData.push([]);
+            
+            // 获取设备信息
+            const deviceCategories = devicesContainer.querySelectorAll('.device-category');
+            deviceCategories.forEach(category => {
+                const categoryName = category.querySelector('.category-title').textContent;
+                deviceSheetsData.push([`设备类别: ${categoryName}`]);
+                
+                const devices = category.querySelectorAll('.device-item');
+                devices.forEach(device => {
+                    const deviceName = device.querySelector('.device-name').textContent;
+                    deviceSheetsData.push(['设备型号', deviceName]);
+                    
+                    const params = device.querySelectorAll('.param-item');
+                    params.forEach(param => {
+                        const paramName = param.querySelector('.param-label').textContent.replace(':', '');
+                        const paramValue = param.querySelector('.param-value').textContent;
+                        deviceSheetsData.push([paramName, paramValue]);
+                    });
+                    
+                    deviceSheetsData.push([]); // 空行分隔不同设备
+                });
+            });
+            
+            const deviceWS = XLSX.utils.aoa_to_sheet(deviceSheetsData);
+            XLSX.utils.book_append_sheet(wb, deviceWS, '设备推荐');
+            
+            // 4. 保存Excel文件
+            XLSX.writeFile(wb, 'LED屏幕参数计算结果.xlsx');
         }
 
         // 打印推荐
@@ -1945,6 +2103,14 @@
                         deviceRecommendations.metadata.total_devices, '个设备型号');
             console.log('✅ 箱体输入窗口已整合：只有一个箱体宽度和一个箱体高度输入框');
             console.log('✅ 设备档位调用逻辑已严格按照11条规则修复');
+            
+            // 动态加载SheetJS库
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+            script.onload = function() {
+                console.log('✅ SheetJS库已加载，Excel导出功能可用');
+            };
+            document.head.appendChild(script);
         });
     </script>
 </body>
